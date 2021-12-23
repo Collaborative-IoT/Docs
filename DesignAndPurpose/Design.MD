@@ -1,7 +1,7 @@
 # The Design of Collaborative
 
 Collaborative has a few different parts that make up the full platform:
--  [ControlServer](https://github.com/Collaborative-IoT/GeneralControlServer)
+-  [ControlServer](https://github.com/Collaborative-IoT/Merlin)
 -  Interfaces([Web](https://github.com/Collaborative-IoT/Web-Frontend), [Desktop](https://github.com/Collaborative-IoT/Desktop-App), [Mobile](https://github.com/Collaborative-IoT/Mobile-App))
 -  [VoiceServer](https://github.com/Collaborative-IoT/VoiceServer)
 -  Postgres
