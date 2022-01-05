@@ -20,5 +20,7 @@ Other:
   - GH_CLIENT_SECRET - Github client secret for oauth.
   - GENERAL_HOST - Host for your server.
   - GENERAL_PORT - Port for your server.
+  - BASE_UI_URL - The base UI url for your server instance, this is the location of the frontend client, it is used strictly
+    for redirecting users to a page that will cache their tokens.
 
 
