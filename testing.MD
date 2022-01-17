@@ -18,4 +18,4 @@ It is important to always have a fresh instance of Postgres running for every te
 # Cheat Sheet
 
 Running the postgres instance with no specific volume: `sudo docker run --name pg3 -p  5432:5432  -e POSTGRES_PASSWORD=password postgres`
-Running the rabbitmq instance `docker run -d --hostname my-rabbit --name some-rabbit rabbitmq:3`
+Running the rabbitmq instance `docker run -d --name some-rabbit -p 5672:5672 -p 5673:5673 -p 15672:15672 rabbitmq:3-management`
