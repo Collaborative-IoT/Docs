@@ -15,3 +15,7 @@ The idea of the integration tests is to ensure that the server and the client is
 
 It is important to always have a fresh instance of Postgres running for every test(easy to just spin up a docker container and avoid persisting data using volumes, then cleaning the leftover data).
 
+# Cheat Sheet
+
+Running the postgres instance with no specific volume: `sudo docker run --name pg3 -p  5432:5432  -e POSTGRES_PASSWORD=password postgres`
+Running the rabbitmq instance `docker run -d --hostname my-rabbit --name some-rabbit rabbitmq:3`
