@@ -18,7 +18,7 @@ Merlin is a Cargo project, so you will need to have Rust/Cargo completely config
 We will only be using docker to spin up quick rabbitmq and postgres instances without hassle. Merlin itself will need to be ran using cargo. Please note that the env variables below for postgres can be modified as need be, this is just the way I do things.
 
 1. Run `docker run --name pg3 -p  5432:5432  -e POSTGRES_PASSWORD=password postgres`
-2. Run `docker run -d --name some-rabbit -p 5672:5672 -p 5673:5673 -p 15672:15672 rabbitmq:3-management`
+2. Run `docker run --name some-rabbit -p 5672:5672 -p 5673:5673 -p 15672:15672 rabbitmq:3-management`
 3. Set the following environmental variables:
 
    - PG_HOST=localhost   
