@@ -8,7 +8,7 @@ communication is effective. The unit tests are simple and test each testable ind
  
 ## Merlin Tests Explained
 
-Merlin requires there to be a RabbitMQ instance running, because it tests the modules against things like room creation and other things that requires messages to be published to the queues. For example, when a room is triggered for creation a message is sent to the voice server via rabbitmq, so we make sure the modules are pushing the correct data.
+Merlin requires there to be a RabbitMQ instance running, because it tests the modules against things like room creation and other things that requires messages to be published to the queues. For example, when a room is triggered for creation a message is sent to the voice server via rabbitmq, so we make sure the modules are pushing the correct data in the different cases.
 
 Merlin requires a PostgresSQL instance to be running during the tests, we test our data capture modules to make sure they are correct. Please note that every single test will require a fresh empty copy of the database. We plan to add a cleanup after every test.
 
