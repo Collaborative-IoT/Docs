@@ -30,3 +30,19 @@ We will only be using docker to spin up quick rabbitmq and postgres instances wi
    - PG_PASSWORD=password
    
 4. Run `cargo test -- --nocapture`
+
+
+## Merlin Tests in Depth
+
+Merlin has a core module called communication_handler, which handles the overarching logic for requests like making sure you aren't making
+easily detected illegal requests. Whenever makes an illegal request we respond to their websocket connection and with an error.
+Merlin is async so this means we are using a task based system, each user has an executing task that handles its websocket message sending.
+We send messages to these tasks by using Multi Producer Single Consumer channels and this is how we essentially test whether or not the response messages are correct or not. Normally we would create a channel and then link the channel to the websocket task, but in the tests we skip the websocket part and just consume the messages and assert after we know one should have been sent.
+
+The same thing is true for checking if messages to the voice server(via rabbitmq) are correct or not. We publish and then read from a channel after executing a communication handler function to make sure the contents are correct for the request we made.
+
+## Merlin Tests Mock-Users vs Real-Users
+
+In the code you will come across the concept of mock-users vs real-users. Mock users are users without an associated user row, but they exist in a server state, real users have this associated user row. This is important because some requests/communication handler functionality checks the database for user data and assumes that it is there. So for example, searching for user previews of a specific room will grab all users of a room and search the database for their avatar url/display name. If a mock user is in a room when this preview search happens, we will run into an out of bounds panic, so only real users must be in the room for these sort of requests. So you will see user "33" being removed and added back sometimes due to their status of a mock-user.
+
+
