@@ -5,6 +5,7 @@ Collaborative has a few different parts that make up the full platform:
 -  Interfaces([Web](https://github.com/Collaborative-IoT/Web-Frontend), [Desktop](https://github.com/Collaborative-IoT/Desktop-App), [Mobile](https://github.com/Collaborative-IoT/Mobile-App))
 -  [VoiceServer](https://github.com/Collaborative-IoT/VoiceServer)
 -  Postgres
+-  [IoT Client Connection Management/Spawner](https://github.com/Collaborative-IoT/Bors)
 
 
 ## How does communication work?
@@ -40,10 +41,15 @@ ControlServer:
 VoiceServer:
 - Handles voice chat
 - Gives credentials to ControlServer for new voice connections
-
+- Only communicates with The control server via RabbitMq.
 RabbitMq:
-- Broker messages between ControlServer and VoiceServer
+- Broker messages between ControlServer, VoiceServer and Iot Client Management.
 
+Iot Client Management:
+- Spawns and manages all connections to the external IoT servers.
+- Abstracts different IoT server response data into one common format.
+- Handles authentication protocols for each IoT server.
+- Only communicates with The control server via RabbitMq.
 
 ## Basic user connection and requests example:
 1. User Oauths
