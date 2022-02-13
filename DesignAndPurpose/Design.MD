@@ -83,6 +83,16 @@ We use a Linked List here to easily be able to remove users that leave the room(
 with maximum performance. There could be 50 people that joins and 50 people that leaves constantly, so
 we needed to be able to insert and delete with low overhead.
 
+We keep the joined users in order, lets say the following joins happen:
+
+1.user 3
+2.user 4
+3.user 5
+
+The List would look like 3->4->5.
+
+When user 3 leaves, it will then look like 4->5.
+
 
 # Basic user connection and requests example:
 1. User Oauths
