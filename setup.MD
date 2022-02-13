@@ -1,4 +1,4 @@
-# Setup
+# Merlin Setup
 
 There are multiple different versions of the GeneralControlServer(Merlin) that you run, each of them require differen't
 environmental variables to run the service smoothly. To spare confusion we will list them all and what they are for.
@@ -22,5 +22,3 @@ Other:
   - GENERAL_PORT - Port for your server.
   - BASE_UI_URL - The base UI url for your server instance, this is the location of the frontend client, it is used strictly
     for redirecting users to a page that will cache their tokens.
-
-
