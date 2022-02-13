@@ -42,6 +42,7 @@ VoiceServer:
 - Handles voice chat
 - Gives credentials to ControlServer for new voice connections
 - Only communicates with The control server via RabbitMq.
+
 RabbitMq:
 - Broker messages between ControlServer, VoiceServer and Iot Client Management.
 
@@ -50,6 +51,8 @@ Iot Client Management:
 - Abstracts different IoT server response data into one common format.
 - Handles authentication protocols for each IoT server.
 - Only communicates with The control server via RabbitMq.
+
+
 
 ## Basic user connection and requests example:
 1. User Oauths
