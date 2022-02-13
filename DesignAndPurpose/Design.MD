@@ -9,7 +9,7 @@ Collaborative has a few different parts that make up the full platform:
 
 
 # How does communication work?
-Users can create "Rooms" and these rooms are the construct for all communication. Everyone in a specific room has their voice broadcasted to everyone else
+Users can create "Rooms" and these rooms are the construct for all communication. Everyone in a specific room has their voice broadcasted to everyone else, the 
 same with text chat.
 
 #How does communication work with IoT servers?
