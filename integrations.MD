@@ -9,4 +9,7 @@ Every time we want to execute an action, the action is queued up and we wait unt
 
 This is a very simple rule we use to avoid confusion when executing actions.
 
+![action_cycle_diagram](https://user-images.githubusercontent.com/35206353/167528408-cf525c0e-1c65-4831-9e8b-2537c9ad0b53.png)
+
+
 The client integration follows the server documentation down to the deepest detail. If you want to learn more about this Iot server you can check the [docs](https://github.com/House-of-IoT).
