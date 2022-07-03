@@ -1,4 +1,4 @@
-# Merlin Setup
+# Merlin
 
 There are multiple different versions of the GeneralControlServer(Merlin) that you run, each of them require differen't
 environmental variables to run the service smoothly. To spare confusion we will list them all and what they are for.
